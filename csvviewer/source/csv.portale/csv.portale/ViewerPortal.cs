@@ -1,36 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using csv.contracts;
+using npantarhei.runtime.contract;
 
 namespace csv.portale
 {
+    [EventBasedComponent]
+    [InstanceOperations]
     public class ViewerPortal : IViewerPortal
     {
         public void Menü_anzeigen()
         {
-            bool run = true;
-            do
+            while(true)
             {
+                var foregroundcolor = Console.ForegroundColor;
                 Console.ForegroundColor = ConsoleColor.DarkGreen;
-                Console.WriteLine("N(ext), P(revious), F(irst), L(ast), e(xit)");
-                Console.ForegroundColor = ConsoleColor.Black;
-                char eingabe = Console.ReadKey().KeyChar;
+                Console.Write("N(ext), P(revious), F(irst), L(ast), ex(it): ");
+                Console.ForegroundColor = foregroundcolor;
+                var eingabe = Console.ReadKey().KeyChar;
+                Console.WriteLine();
 
-                switch (eingabe)
+                switch (char.ToLower(eingabe))
                 {
                     case 'n':
-                    case 'N':
-                        if (Nächste_Seite != null)
-                            Nächste_Seite();
+                        Nächste_Seite();
                         break;
-                    case 'e':
-                    case 'E':
-                        run = false;
+                    case 'f':
+                        Erste_Seite();
                         break;
+                    case 'x':
+                        Exit();
+                        return;
                 }
-            } while (run);
-
-
+            }
         }
 
         public void Zeige_Seite_an(IEnumerable<string> zeilen)
@@ -41,6 +43,9 @@ namespace csv.portale
             }
         }
 
+
+        public event Action Erste_Seite;
         public event Action Nächste_Seite;
+        public event Action Exit;
     }
 }

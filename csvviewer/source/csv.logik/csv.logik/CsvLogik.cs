@@ -3,35 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using csv.contracts;
+using npantarhei.runtime.contract;
 
 namespace csv.logik
 {
+    [InstanceOperations]
     public class CsvLogik : ILogik
     {
         private const int SeitenLaenge = 5;
         private int _zeilenIndex = 0;
-        //public Tuple<string, IEnumerable<string>> Erste_Seite_entnehmen(string[] rohzeilen)
-        //{
-        //    if(rohzeilen == null || rohzeilen.Length == 0)
-        //    {
-        //        return new Tuple<string, IEnumerable<string>>("", new List<string>());
-        //    }
-
-        //    string header = rohzeilen[0];
-        //    List<string> records = new List<string>();
-            
-        //    for (int i = 1; i < 6; i++)
-        //    {
-        //        if(rohzeilen.Length<=i)
-        //        {
-        //            break;
-        //        }
-
-        //        records.Add(rohzeilen[i]);
-        //    }
-
-        //    return new Tuple<string, IEnumerable<string>>(header, records);
-        //}
 
         public Tuple<string, IEnumerable<string>> Entnehme_Seite(Tuple<int, int, string[]> seiteninfo)
         {
