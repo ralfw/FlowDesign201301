@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using csv.contracts;
 
 namespace csv.portale
@@ -10,10 +8,28 @@ namespace csv.portale
     {
         public void Menü_anzeigen()
         {
-            Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine("N(ext), P(revious), F(irst), L(ast), eX(it)");
-            Console.ForegroundColor = ConsoleColor.Black;
-            string eingabe=Console.ReadLine();
+            bool run = true;
+            do
+            {
+                Console.ForegroundColor = ConsoleColor.DarkGreen;
+                Console.WriteLine("N(ext), P(revious), F(irst), L(ast), e(xit)");
+                Console.ForegroundColor = ConsoleColor.Black;
+                char eingabe = Console.ReadKey().KeyChar;
+
+                switch (eingabe)
+                {
+                    case 'n':
+                    case 'N':
+                        if (Nächste_Seite != null)
+                            Nächste_Seite();
+                        break;
+                    case 'e':
+                    case 'E':
+                        run = false;
+                        break;
+                }
+            } while (run);
+
 
         }
 
@@ -24,5 +40,7 @@ namespace csv.portale
                 Console.WriteLine(zeile);
             }
         }
+
+        public event Action Nächste_Seite;
     }
 }
