@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csv.client", "csv.client\csv.client.csproj", "{484D037A-E285-4FEC-99AD-BB96BE1A16B0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csv.client.flowruntime", "csv.client.flowruntime\csv.client.flowruntime.csproj", "{581483DE-6E83-4502-9D1C-44E32A7D8187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -13,6 +15,10 @@ Global
 		{484D037A-E285-4FEC-99AD-BB96BE1A16B0}.Debug|x86.Build.0 = Debug|x86
 		{484D037A-E285-4FEC-99AD-BB96BE1A16B0}.Release|x86.ActiveCfg = Release|x86
 		{484D037A-E285-4FEC-99AD-BB96BE1A16B0}.Release|x86.Build.0 = Release|x86
+		{581483DE-6E83-4502-9D1C-44E32A7D8187}.Debug|x86.ActiveCfg = Debug|x86
+		{581483DE-6E83-4502-9D1C-44E32A7D8187}.Debug|x86.Build.0 = Debug|x86
+		{581483DE-6E83-4502-9D1C-44E32A7D8187}.Release|x86.ActiveCfg = Release|x86
+		{581483DE-6E83-4502-9D1C-44E32A7D8187}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

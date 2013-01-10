@@ -1,0 +1,42 @@
+﻿/
+.run, Zeige_erste_Seite
+Zeige_erste_Seite, viewerportal.Menü_anzeigen
+viewerportal.Erste_Seite, Zeige_erste_Seite
+viewerportal.Nächste_Seite, Zeige_nächste_Seite
+viewerportal.Exit, .exit
+
+
+Zeige_erste_Seite
+., Hole_Records_erste_Seite
+Hole_Records_erste_Seite, formatiere_Seite
+formatiere_Seite, zeige_Seite_an
+zeige_Seite_an, .
+
+Zeige_nächste_Seite
+., Hole_Records_nächste_Seite
+Hole_Records_nächste_Seite, formatiere_Seite
+formatiere_Seite, zeige_Seite_an
+
+
+Hole_Records_erste_Seite
+., dateiname_von_Cmdline_lesen
+dateiname_von_Cmdline_lesen, alle_Zeilen_laden
+alle_Zeilen_laden, Erste_Seite_entnehmen
+Erste_Seite_entnehmen, .
+
+Hole_Records_nächste_Seite
+., dateiname_von_Cmdline_lesen
+dateiname_von_Cmdline_lesen, alle_Zeilen_laden
+alle_Zeilen_laden, Nächste_Seite_entnehmen
+Nächste_Seite_entnehmen, .
+
+
+Erste_Seite_entnehmen
+., ermittle_erste_Seitennummer
+ermittle_erste_Seitennummer, entnehme_Seite
+entnehme_Seite, .
+
+Nächste_Seite_entnehmen
+., ermittle_nächste_Seitennummer
+ermittle_nächste_Seitennummer, entnehme_Seite
+entnehme_Seite, .
