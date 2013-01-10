@@ -1,5 +1,8 @@
 ﻿using System.Linq;
 using System.Text;
+using csv.filesystem;
+using csv.logik;
+using csv.portale;
 
 namespace csv.client
 {
@@ -7,9 +10,12 @@ namespace csv.client
     {
         static void Main(string[] args)
         {
-            //new Integration(
-                    
-            //    ).Starten();
+            new Integration(
+                new StarterPortal(),
+                new ViewerPortal(), 
+                new FileAdapter(), 
+                new CsvLogik()
+                ).Starten();
         }
     }
 }

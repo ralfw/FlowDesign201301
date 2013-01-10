@@ -37,6 +37,9 @@
     <Reference Include="csv.contracts">
       <HintPath>..\..\..\bin.contracts\csv.contracts.dll</HintPath>
     </Reference>
+    <Reference Include="csv.filesystem, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="csv.logik, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="csv.portale, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,6 +57,11 @@
     <Content Include="personen.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="csv.client.bat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
