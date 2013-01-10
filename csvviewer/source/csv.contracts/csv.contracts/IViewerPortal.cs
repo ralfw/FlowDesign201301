@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 
 namespace csv.contracts
@@ -6,5 +7,7 @@ namespace csv.contracts
     {
         void Menü_anzeigen();
         void Zeige_Seite_an(IEnumerable<string> zeilen);
+
+        event Action Nächste_Seite;
     }
 }
