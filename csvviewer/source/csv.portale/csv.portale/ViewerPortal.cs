@@ -13,6 +13,8 @@ namespace csv.portale
             Console.ForegroundColor = ConsoleColor.DarkGreen;
             Console.WriteLine("N(ext), P(revious), F(irst), L(ast), eX(it)");
             Console.ForegroundColor = ConsoleColor.Black;
+            string eingabe=Console.ReadLine();
+
         }
 
         public void Zeige_Seite_an(IEnumerable<string> zeilen)
